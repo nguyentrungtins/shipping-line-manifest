@@ -1,0 +1,52 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+  - name: auth-service
+    url: http://10.0.194.60:3001/
+    routes:
+      - name: auth-route
+        paths:
+          - /api/v1/auth
+  - name: user-service
+    url: http://10.0.194.60:3002/
+    routes:
+      - name: user-route
+        paths:
+          - /api/v1/user
+  - name: route-mapping-service
+    url: http://10.0.194.60:3003/
+    routes:
+      - name: route-mapping-route
+        paths:
+          - /api/v1/route
+  - name: container-service
+    url: http://10.0.194.60:3004/
+    routes:
+      - name: container-route
+        paths:
+          - /api/v1/container
+  - name: port-service
+    url: http://10.0.194.60:3005/
+    routes:
+      - name: port-route
+        paths:
+          - /api/v1/port
+  - name: vessel-service
+    url: http://10.0.194.60:3006/
+    routes:
+      - name: vessel-route
+        paths:
+          - /api/v1/vessel
+  - name: booking-service
+    url: http://10.0.194.60:3007/
+    routes:
+      - name: booking-route
+        paths:
+          - /api/v1/booking
+  - name: tracking-service
+    url: http://10.0.194.60:3008/
+    routes:
+      - name: tracking-route
+        paths:
+          - /api/v1/tracking
